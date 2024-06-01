@@ -231,9 +231,10 @@ for_window [class=".*"] border pixel 1
 
 #Custom binds
 
-# Launch flameshot GUI for custom selection
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+p exec ~/sh-files/colorpicker.sh
+bindsym Ctrl+Shift+e exec nemo
+bindsym Ctrl+Shift+f exec firefox
 
 bindsym $mod+n exec betterlockscreen -l --text "Hi mizu! :)"
 
