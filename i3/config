@@ -236,7 +236,7 @@ bindsym $mod+Shift+p exec ~/sh-files/colorpicker.sh
 bindsym Ctrl+Shift+e exec nemo
 bindsym Ctrl+Shift+f exec firefox
 
-bindsym $mod+n exec betterlockscreen -l --text "Hi mizu! :)"
+bindsym $mod+n exec betterlockscreen -l --text "Hi mizu! :)" -w
 
 bindsym $mod+F1 exec xbacklight -dec 10
 bindsym $mod+F2 exec xbacklight -inc 10
