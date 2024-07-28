@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mizu/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mizu/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/home/mizu/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/mizu/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mizu/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -171,7 +171,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\nà\a\0\0\6\0\25\00076\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\r\0'\4\14\0005\5\15\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\16\0'\4\17\0005\5\18\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\19\0'\4\20\0005\5\21\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\22\0'\4\23\0005\5\24\0B\0\5\1K\0\1\0\1\0\3\tdesc\28Quickfix List (Trouble)\fnoremap\2\vsilent\2#<cmd>Trouble qflist toggle<cr>\15<leader>tQ\1\0\3\tdesc\28Location List (Trouble)\fnoremap\2\vsilent\2$<cmd>Trouble loclist toggle<cr>\15<leader>tL\1\0\3\tdesc1LSP Definitions / references / ... (Trouble)\fnoremap\2\vsilent\2?<cmd>Trouble lsp toggle focus=false win.position=right<cr>\15<leader>cl\1\0\3\tdesc\22Symbols (Trouble)\fnoremap\2\vsilent\0020<cmd>Trouble symbols toggle focus=false<cr>\15<leader>cs\1\0\3\tdesc!Buffer Diagnostics (Trouble)\fnoremap\2\vsilent\0025<cmd>Trouble diagnostics toggle filter.buf=0<cr>\15<leader>tT\1\0\3\tdesc\26Diagnostics (Trouble)\fnoremap\2\vsilent\2(<cmd>Trouble diagnostics toggle<cr>\15<leader>tt\6n\20nvim_set_keymap\bapi\bvim\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/mizu/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -191,22 +191,27 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mizu/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/mizu/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\nà\a\0\0\6\0\25\00076\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\r\0'\4\14\0005\5\15\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\16\0'\4\17\0005\5\18\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\19\0'\4\20\0005\5\21\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\22\0'\4\23\0005\5\24\0B\0\5\1K\0\1\0\1\0\3\tdesc\28Quickfix List (Trouble)\fnoremap\2\vsilent\2#<cmd>Trouble qflist toggle<cr>\15<leader>tQ\1\0\3\tdesc\28Location List (Trouble)\fnoremap\2\vsilent\2$<cmd>Trouble loclist toggle<cr>\15<leader>tL\1\0\3\tdesc1LSP Definitions / references / ... (Trouble)\fnoremap\2\vsilent\2?<cmd>Trouble lsp toggle focus=false win.position=right<cr>\15<leader>cl\1\0\3\tdesc\22Symbols (Trouble)\fnoremap\2\vsilent\0020<cmd>Trouble symbols toggle focus=false<cr>\15<leader>cs\1\0\3\tdesc!Buffer Diagnostics (Trouble)\fnoremap\2\vsilent\0025<cmd>Trouble diagnostics toggle filter.buf=0<cr>\15<leader>tT\1\0\3\tdesc\26Diagnostics (Trouble)\fnoremap\2\vsilent\2(<cmd>Trouble diagnostics toggle<cr>\15<leader>tt\6n\20nvim_set_keymap\bapi\bvim\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: nightfox.nvim
-time([[Config for nightfox.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme carbonfox\bcmd\bvim\0", "config", "nightfox.nvim")
-time([[Config for nightfox.nvim]], false)
 -- Config for: ultisnips
 time([[Config for ultisnips]], true)
 try_loadstring("\27LJ\2\nü\1\0\0\2\0\a\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\3\0=\1\4\0006\0\0\0009\0\1\0'\1\6\0=\1\5\0K\0\1\0\f<s-tab>!UltiSnipsJumpBackwardTrigger UltiSnipsJumpForwardTrigger\n<C-y>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
 time([[Config for ultisnips]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme carbonfox\bcmd\bvim\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
