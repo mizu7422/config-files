@@ -25,6 +25,18 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+            -- Set up a keybinding to open the .config/nvim directory
+        vim.api.nvim_set_keymap('n', '<leader>pc', '', {
+            noremap = true,
+            callback = function()
+                builtin.find_files({
+                    prompt_title = "Neovim Config",
+                    cwd = "~/.config/nvim",
+                    hidden = true, -- Show hidden files
+                })
+            end,
+            desc = "Find files in Neovim config directory"
+        })
     end
 }
 

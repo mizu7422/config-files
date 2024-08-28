@@ -52,6 +52,26 @@ return {
                     vim.g.zig_fmt_autosave = 0
 
                 end,
+                require'lspconfig'.rust_analyzer.setup{
+                settings = {
+                    ["rust-analyzer"] = {
+                        cargo = {
+                            -- Set to "check" if you want it to use cargo check instead of the full build
+                            allFeatures = true, -- Enable all Cargo features
+                        },
+                        procMacro = {
+                            enable = true, -- Enable support for procedural macros
+                        },
+                        checkOnSave = {
+                            command = "clippy", -- You can use "clippy" or "check" for linting
+                        },
+                    }
+                },
+                on_attach = function(client, bufnr)
+                    -- Your on_attach function to enable keybindings, etc.
+                end,
+            },
+
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
