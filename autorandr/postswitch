@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh --bg-scale /home/mizu/Pictures/wallpapers/steam.png

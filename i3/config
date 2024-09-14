@@ -18,7 +18,7 @@ exec --no-startup-id polybar
 exec --no-startup-id dunst
 exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2'
 exec --no-startup-id i3-msg 'workspace 2; exec kitty; workspace 1'
-exec --no-startup-id webcord
+exec --no-startup-id vesktop
 exec --no-startup-id steam
 exec --no-startup-id gimp
 exec --no-startup-id flameshot
@@ -27,7 +27,7 @@ exec --no-startup-id picom -b --no-fading-openclose --fade-in-step=1 --fade-out-
 
 # Assign workplaces
 # Assign Workspaces:
-assign [class="WebCord"] $ws4
+assign [class="vesktop"] $ws4
 assign [class="steam"] $ws5
 assign [class="Gimp"] $ws6
 
@@ -60,7 +60,6 @@ exec --no-startup-id feh --bg-scale /home/mizu/Pictures/wallpapers/steam.png
 exec --no-startup-id nm-applet
 
 #Set keyboard layout
-exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144.00
 exec --no-startup-id setxkbmap -layout "us" -variant "dvorak" -option caps:swapescape
 
 # Use pactl to adjust volume in PulseAudio.
@@ -79,6 +78,10 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec kitty
+
+# start autorandr profile switcher
+for_window [title="Autorandr Profile Selector"] floating enable
+bindsym $mod+p exec /home/mizu/Programming/autorandr_profile_switcher/target/release/monitor_setup_switcher
 
 # kill focused window
 bindsym $mod+c kill
@@ -224,7 +227,6 @@ gaps outer 6
 # Remove window title bars
 for_window [class=".*"] border pixel 1
 
-
 #Custom binds
 
 bindsym $mod+Shift+s exec flameshot gui
@@ -239,5 +241,4 @@ bindsym $mod+F2 exec xbacklight -inc 10
 
 bindsym $mod+F10 exec setxkbmap -layout "us" -variant "dvorak" -option caps:swapescape
 bindsym $mod+F11 exec setxkbmap -layout "us"
-
 
