@@ -16,10 +16,9 @@ exec --no-startup-id polybar
 
 # Execute apps when it starts
 exec --no-startup-id dunst
-exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2'
+exec --no-startup-id i3-msg 'workspace 1; exec zen-browser; workspace 2'
 exec --no-startup-id i3-msg 'workspace 2; exec kitty; workspace 1'
 exec --no-startup-id vesktop
-exec --no-startup-id steam
 exec --no-startup-id gimp
 exec --no-startup-id flameshot
 exec --no-startup-id i3-msg 'workspace 0; exec ranger; exec btop; workspace 0'
@@ -28,7 +27,6 @@ exec --no-startup-id picom -b --no-fading-openclose --fade-in-step=1 --fade-out-
 # Assign workplaces
 # Assign Workspaces:
 assign [class="vesktop"] $ws4
-assign [class="steam"] $ws5
 assign [class="Gimp"] $ws6
 
 
@@ -53,7 +51,7 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id feh --bg-scale /home/mizu/Pictures/wallpapers/steam.png
+exec --no-startup-id feh --bg-scale /home/mizu/Pictures/wallpapers/wallpaper_maybe.png
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -81,7 +79,7 @@ bindsym $mod+Return exec kitty
 
 # start autorandr profile switcher
 for_window [title="Autorandr Profile Selector"] floating enable
-bindsym $mod+p exec /home/mizu/Programming/autorandr_profile_switcher/target/release/monitor_setup_switcher
+bindsym $mod+p exec /home/mizu/Programming/autorandr-profile-selector/target/release/monitor_setup_switcher
 
 # kill focused window
 bindsym $mod+c kill
@@ -214,25 +212,26 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+client.focused #333333 #333333 #333333 #333333
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
 #        status_command polybar
 #}
-
-# Set the gaps in pixels
-gaps inner 6
-gaps outer 6
-
 # Remove window title bars
 for_window [class=".*"] border pixel 1
+
+# Set the gaps in pixels
+gaps outer 2
+
 
 #Custom binds
 
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+p exec ~/sh-files/colorpicker.sh
 bindsym Ctrl+Shift+e exec nemo
-bindsym Ctrl+Shift+f exec firefox
+bindsym Ctrl+Shift+b exec zen-browser
 
 bindsym $mod+n exec betterlockscreen -l --text "Hi mizu! :)"
 

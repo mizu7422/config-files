@@ -1,6 +1,5 @@
--- lua/lazy_init.lua
 local function ColorMyPencils(color)
-    color = color or "carbonfox"
+    color = color or "moonfly"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -12,21 +11,11 @@ return {
     -- Other plugin configurations
 
     {
-        "EdenEast/nightfox.nvim",
+        "bluz71/vim-moonfly-colors",
         config = function()
-            require("nightfox").setup({
-                options = {
-                    transparent = true, -- Enable transparency if needed
-                    terminal_colors = true,
-                },
-                colors = {
-                    -- You can define custom colors here if necessary
-                },
-                groups = {
-                    -- Customize groups if needed
-                },
-            })
-            ColorMyPencils("carbonfox")
+            -- Moonfly does not require a setup function.
+            -- Set the colorscheme directly.
+            ColorMyPencils("moonfly")
         end
     },
 
