@@ -1,0 +1,104 @@
+window {
+    margin: 8px;
+    border: 1px solid #e5e5e7;
+    background-color: transparent;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#input {
+    padding: 12px 16px;
+    border: none;
+    color: #1d1d1f;
+    font-weight: 400;
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 12px;
+    margin: 8px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+#input:focus {
+    border-bottom: 2px solid #86868b;
+    margin-bottom: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#inner-box {
+    margin: 8px;
+    border: none;
+    color: #1d1d1f;
+    font-weight: 400;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+#outer-box {
+    margin: 0px;
+    border: 1px solid #d2d2d7;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+#scroll {
+    margin-top: 4px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 4px;
+    background-color: transparent;
+}
+
+#img:selected {
+    border-radius: 10px;
+    margin: 2px;
+    padding: 4px;
+    transition: all 0.2s ease;
+}
+
+#text {
+    margin: 12px;
+    color: #1d1d1f;
+    font-weight: 400;
+}
+
+#text:selected {
+    margin: 2px 12px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 0;
+    transition: all 0.2s ease;
+}
+
+#entry {
+    margin: 2px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#entry:selected {
+    margin: 2px 0px;
+    border: 1px solid #86868b;
+    border-radius: 10px;
+    background-color: rgba(134, 134, 139, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional modern touches */
+#entry:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+#text:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 2px 2px;
+}
