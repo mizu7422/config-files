@@ -7,5 +7,5 @@
 
 ## Installation
 ```bash
-$ python3 config_setup.py
+$ python config_setup.py
 ```
