@@ -1,0 +1,105 @@
+# Ignore OS-specific temporary files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+CrashLog
+*.crash
+
+# Cache directories
+Cache/
+GPUCache/
+DawnGraphiteCache/
+DawnWebGPUCache/
+Code\ Cache/
+vesktop/sessionData/
+obsidian/Cache/
+obsidian/Code\ Cache/
+obsidian/WebStorage/
+obsidian/Session\ Storage/
+
+# Browser-related storage
+Cookies*
+Cookies-journal
+TransportSecurity
+Trust\ Tokens
+Local\ Storage/
+IndexedDB/
+WebStorage/
+QuotaManager*
+
+# Session data
+Session\ Storage/
+
+# Crashpad & diagnostics
+Crashpad/
+pki/
+
+# GIMP temp/cache files
+GIMP/**/*.log
+GIMP/action-history/
+GIMP/backups/
+GIMP/CrashLog
+GIMP/modules/
+GIMP/plug-ins/
+GIMP/scripts/
+GIMP/tmp/
+
+# Tmux plugins that should not be tracked
+tmux/plugins/tmux-resurrect/
+tmux/plugins/tmux-sensible/
+
+# Vesktop/Discord
+vesktop/Preferences
+vesktop/Service\ Worker/
+vesktop/Shared\ Dictionary/
+vesktop/SharedStorage
+
+# Obsidian
+obsidian/Preferences
+obsidian/Session\ Storage/
+obsidian/Shared\ Dictionary/
+obsidian/WebStorage/
+obsidian/Cache
+
+# Spicetify
+spicetify/Extensions/
+spicetify/Themes/
+
+# Go telemetry
+go/telemetry/
+
+# Temporary system/user-specific files
+*~
+.swp
+.swo
+.tmp
+.lock
+index
+the-real-index
+Singleton*
+
+# User-specific files (sensitive)
+pulse/cookie
+dconf/user
+user-dirs.dirs
+user-dirs.locale
+
+# Electron app local state
+prefs
+ad-state-storage.bnk
+local-files.bnk
+pending-messages*
+watch-sources.bnk
+
+# Editor/state files
+lazy-lock.json
+state.json
+
+# Secrets
+.env
+*.key
+*.pem
+*.db
+*.sqlite

@@ -1,0 +1,39 @@
+[window]
+decorations = "none"
+startup_mode = "Windowed"
+opacity = 0.65
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 12.0
+
+[font.normal]
+style = "Regular"
+
+[colors.primary]
+background = "#FFFFFF"   # White background
+foreground = "#000000"   # Black text
+
+[colors.normal]
+black   = "#555555"  # softened black (dark gray)
+red     = "#E07A7A"  # pastel red
+green   = "#7AC27A"  # pastel green
+yellow  = "#D9C27A"  # pastel yellow
+blue    = "#7A8ED9"  # pastel blue
+magenta = "#C27AD9"  # pastel magenta
+cyan    = "#7AD9D9"  # pastel cyan
+white   = "#CCCCCC"  # softer white-gray
+
+[colors.bright]
+black   = "#999999"  # lighter gray
+red     = "#FFA3A3"  # softer bright red
+green   = "#A3E6A3"  # softer bright green
+yellow  = "#FFF3A3"  # soft bright yellow
+blue    = "#A3B7FF"  # soft bright blue
+magenta = "#E6A3FF"  # soft bright magenta
+cyan    = "#A3FFFF"  # soft bright cyan
+white   = "#FFFFFF"  # keep white as pure white
+
