@@ -14,19 +14,21 @@ def parse_packages(file_path):
         for line in f:
             line = line.strip()
             if line and not line.startswith("#"):
-                # Extract package name before first space (ignore version)
                 pkg = line.split()[0]
                 packages.append(pkg)
     return packages
 
-def install_package(pkg, use_yay=False):
+def install_packages(packages, use_yay=False):
+    if not packages:
+        return
+
     installer = ["yay"] if use_yay else ["sudo", "pacman"]
-    cmd = installer + ["-S", "--noconfirm", pkg]
-    print(f"Installing {pkg} using {'yay' if use_yay else 'pacman'}...")
+    cmd = installer + ["-S", "--noconfirm"] + packages
+    print(f"Installing {len(packages)} packages using {'yay' if use_yay else 'pacman'}...")
     try:
         subprocess.run(cmd, check=True)
     except subprocess.CalledProcessError as e:
-        print(f"Failed to install {pkg}: {e}")
+        print(f"Failed to install packages: {e}")
 
 def move_config():
     if not CONFIG_DIR.exists():
@@ -47,12 +49,10 @@ def move_config():
 
 def main():
     pacman_packages = parse_packages(PACMAN_PACKAGE_FILE)
-    yay_packages = parse_packages(AUR_PACKAGE_FILE)
-    for pkg in pacman_packages:
-        install_package(pkg)
+    aur_packages = parse_packages(AUR_PACKAGE_FILE)
 
-    for pkg in yay_packages:
-        install_package(pkg, True)
+    install_packages(pacman_packages, use_yay=False)
+    install_packages(aur_packages, use_yay=True)
 
     move_config()
 
