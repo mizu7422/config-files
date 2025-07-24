@@ -1,39 +1,40 @@
 [window]
 decorations = "none"
 startup_mode = "Windowed"
-opacity = 0.65
+opacity = 0.9
 
 [window.padding]
 x = 10
-y = 10
+y = 7
 
 [font]
-size = 12.0
+size = 20.0
 
 [font.normal]
 style = "Regular"
+family = "JetBrains Mono Nerd Font"
 
 [colors.primary]
-background = "#FFFFFF"   # White background
-foreground = "#000000"   # Black text
+background = "#121212"   # dark background
+foreground = "#f5f5f5"   # light text
 
 [colors.normal]
-black   = "#555555"  # softened black (dark gray)
+black   = "#1e1e1e"  # background tone
 red     = "#E07A7A"  # pastel red
 green   = "#7AC27A"  # pastel green
 yellow  = "#D9C27A"  # pastel yellow
 blue    = "#7A8ED9"  # pastel blue
 magenta = "#C27AD9"  # pastel magenta
 cyan    = "#7AD9D9"  # pastel cyan
-white   = "#CCCCCC"  # softer white-gray
+white   = "#cccccc"  # light gray
 
 [colors.bright]
-black   = "#999999"  # lighter gray
-red     = "#FFA3A3"  # softer bright red
-green   = "#A3E6A3"  # softer bright green
+black   = "#555555"  # dim gray
+red     = "#FFA3A3"  # soft bright red
+green   = "#A3E6A3"  # soft bright green
 yellow  = "#FFF3A3"  # soft bright yellow
 blue    = "#A3B7FF"  # soft bright blue
 magenta = "#E6A3FF"  # soft bright magenta
 cyan    = "#A3FFFF"  # soft bright cyan
-white   = "#FFFFFF"  # keep white as pure white
+white   = "#ffffff"  # pure white
 

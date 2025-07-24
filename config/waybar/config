@@ -1,58 +1,118 @@
 {
-  "reload_style_on_change": true,
   "layer": "top",
-  "position": "top",
-  "height": 24,
-  "spacing": 5,
+  "position": "right",
+  "width": 40,
+  "spacing": 4,
+
   "modules-left": [
-    "custom/launcher",
-    "hyprland/window"
-  ],
-  "modules-center": [],
-  "modules-right": [
     "clock",
-    "battery",
+    "custom/sep",
     "network",
-    "pulseaudio"
   ],
-  "hyprland/window": {
-    "format": "{class}",
-    "max-length": 20,
-    "rewrite": {
-      "^(?!.*\\S).*": "Finder"
-    }
-  },
-  "custom/launcher": {
-    "format": "",
-    "on-click": "wofi --show drun",
-    "tooltip": false
-  },
-  "clock": {
-    "format": "{:%A %B %d %H:%M %p}"
-  },
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "custom/bluetooth_devices",
+    "custom/sep",
+	"battery",
+    "custom/sep",
+    "pulseaudio",
+    "custom/powermenu"
+  ],
+
   "battery": {
+	"rotate": 90,
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "   {capacity}%",
-    "format-plugged": "   {capacity}%",
+    "format": "{icon}  {capacity}% ",
+    "format-charging": "   {capacity}% ",
+    "format-plugged": "   {capacity}% ",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
     ]
   },
+
+  "custom/sep": {
+	"rotate": 90,
+    "format": "|"
+  },
+
+  "custom/powermenu": {
+    "on-click": "~/.config/wofi/scripts/wofipowermenu.py",
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/bluetooth_devices": {
+    "exec": "$HOME/.config/waybar/custom_modules/bluetooth_devices.sh",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "default": ""
+    },
+    "justify": "center",
+    "rotate": 90,
+    "interval": 5,
+    "on-click": "blueman-manager"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format-icons": {
+      "active": "",
+      "urgent": "",
+      "default": ""
+    }
+  },
+
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%A, %B %d, %Y}"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": false
+  },
+
+
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "rotate": 90,
+    "format-wifi": "{essid}    ",
     "format-ethernet": " {ifname}"
   },
+
   "pulseaudio": {
+    "rotate": 90,
     "format": "{icon} {volume}%",
-    "on-click": "pavucontrol"
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": " MUTE",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 3,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
   }
 }
 

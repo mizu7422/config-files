@@ -1,5 +1,5 @@
 local function ColorMyPencils(color)
-    color = color or "polar"
+    color = color or "base16-black-metal"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -11,11 +11,11 @@ return {
     -- Other plugin configurations
 
     {
-        "habamax/vim-polar",
+        "metalelf0/base16-black-metal-scheme",
         config = function()
             -- Moonfly does not require a setup function.
             -- Set the colorscheme directly.
-            ColorMyPencils("polar")
+            ColorMyPencils("base16-black-metal")
         end
     },
 

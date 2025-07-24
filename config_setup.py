@@ -30,7 +30,7 @@ def install_packages(packages, use_yay=False):
     except subprocess.CalledProcessError as e:
         print(f"Failed to install packages: {e}")
 
-def move_config():
+def copy_config():
     if not CONFIG_DIR.exists():
         print(f"No config directory found at {CONFIG_DIR}. Skipping.")
         return
@@ -42,10 +42,8 @@ def move_config():
         if dest.exists():
             if dest.is_dir():
                 shutil.rmtree(dest)
-            else:
-                dest.unlink()
         shutil.move(str(item), str(dest))
-        print(f"Moved {item} → {dest}")
+        print(f"Copied {item} → {dest}")
 
 def main():
     pacman_packages = parse_packages(PACMAN_PACKAGE_FILE)
@@ -54,7 +52,7 @@ def main():
     install_packages(pacman_packages, use_yay=False)
     install_packages(aur_packages, use_yay=True)
 
-    move_config()
+    copy_config()
 
 if __name__ == "__main__":
     main()

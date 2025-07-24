@@ -3,12 +3,12 @@
 layer=overlay
 
 # STYLE
-font=Proxima Nova 11.2
-width=220
+font=Proxima Nova 16.0
+width=400
 margin=5,18,0
-padding=7
+padding=10
 border-size=1
-border-radius=10
+border-radius=15
 progress-color=#ffffff
 max-icon-size=36
 icon-path=/usr/share/icons/WhiteSur-dark:/usr/share/icons/WhiteSur:/usr/share/icons/Adwaita:/usr/share/icons/hicolor
