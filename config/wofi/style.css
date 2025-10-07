@@ -1,91 +1,117 @@
+/* ==========================
+   3DS-Inspired Wofi Theme – Gray Version - Icon Grid
+   ========================== */
+
+/* Main Window */
 window {
-    margin: 16px;
-    border: 1px solid #2a2a2c;
-    background-color: transparent;
-    border-radius: 20px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    margin: 8px;
+    border: 2px solid #c8c8cd;
+    border-top-color: #f9f9f9;
+    border-bottom-color: #b0b0b5;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, #ececee, #dcdcdf);
+    box-shadow: 0 2px 0 rgba(255,255,255,0.35), 0 4px 0 rgba(0,0,0,0.15);
 }
 
+/* Input Field */
 #input {
-    padding: 14px 20px;
-    border: none;
-    color: #f5f5f7;
+    padding: 12px 16px;
+    border: 2px solid #c8c8cd;
+    border-top-color: #f9f9f9;
+    border-bottom-color: #b0b0b5;
+    color: #1d1d1f;
     font-weight: 400;
-    background-color: #1c1c1e;
+    background: linear-gradient(to bottom, #e7e7e9, #d6d6d9);
     outline: none;
-    border-radius: 16px;
-    margin: 24px 24px 12px 24px;
-    font-size: 22px;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08);
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    margin: 8px 8px 0 8px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 0 #ffffff, inset 0 -2px 0 #b0b0b5;
+    transition: all 0.15s ease;
 }
 
 #input:focus {
-    border: 1px solid #5e5e62;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.12);
+    border-color: #86868b;
+    box-shadow: inset 0 2px 0 #ffffff, inset 0 -2px 0 #b0b0b5, 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Inner Box */
+#inner-box {
+    margin: 8px;
+    border: 2px solid #c8c8cd;
+    border-top-color: #f9f9f9;
+    border-bottom-color: #b0b0b5;
+    color: #1d1d1f;
+    font-weight: 400;
+    background: #dfdcd6;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: inset 0 2px 0 #ffffff, inset 0 -2px 0 #b0b0b5;
+}
+
+/* Outer Box */
 #outer-box {
     margin: 0;
-    padding: 8px;
-    border: 1px solid #3a3a3c;
-    border-radius: 18px;
-    background-color: #121212;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.03);
-}
-
-#inner-box {
-    margin: 0;
-    padding: 8px 0;
+    border: 2px solid #c8c8cd;
+    border-top-color: #f9f9f9;
+    border-bottom-color: #b0b0b5;
     border-radius: 12px;
-    color: #f5f5f7;
-    font-weight: 400;
+    background: linear-gradient(to bottom, #e7e7e9, #bbbbbb);
+    box-shadow: 0 2px 0 rgba(255,255,255,0.35), 0 3px 0 rgba(0,0,0,0.1);
 }
 
+/* Scroll */
 #scroll {
     margin: 4px 0;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: transparent;
 }
 
+/* Entries - Icon Grid Layout */
 #entry {
-    margin: 4px 12px;
-    padding: 12px 16px;
-    border: none;
+    margin: 8px;
+    padding: 12px;
     border-radius: 12px;
-    background-color: transparent;
-    transition: background-color 0.15s ease;
-}
-
-#entry:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background: none;
+    min-width: 80px;
+    min-height: 80px;
+    box-sizing: border-box;
 }
 
 #entry:selected {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid #5e5e62;
-    margin: 0px 20px 0px 20px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
+    margin: 8px;
+    padding: 12px;
 }
 
+#entry:hover {
+    border-radius: 12px;
+    transition: all 0.15s ease;
+    margin: 8px;
+    padding: 12px;
+}
+
+/* Hide text labels completely */
 #text {
+    display: none !important;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    width: 0;
     margin: 0;
-    margin-left: 13px;
-    color: #f5f5f7;
-    font-size: 18px;
-    font-weight: 400;
+    padding: 0;
 }
 
-#text:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 2px 4px;
+/* Images - Center and style icons */
+#img {
+    background: linear-gradient(to bottom, #f6f6f6, #dcdcdf);
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin: auto;
+    display: block;
 }
-
 #img:selected {
-    border-radius: 10px;
-    margin: 4px;
-    transition: all 0.2s ease;
+    border: 2px solid #86868b;
+    box-sizing: border-box;
 }
-

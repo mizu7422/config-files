@@ -7,7 +7,7 @@
   "modules-left": [
     "clock",
     "custom/sep",
-    "network",
+    "network"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -45,7 +45,7 @@
   },
 
   "custom/powermenu": {
-    "on-click": "~/.config/wofi/scripts/wofipowermenu.py",
+    "on-click": "wlogout",
     "format": "",
     "tooltip": false
   },
@@ -86,13 +86,6 @@
     "show-passive-items": false
   },
 
-
-  "network": {
-    "rotate": 90,
-    "format-wifi": "{essid}    ",
-    "format-ethernet": " {ifname}"
-  },
-
   "pulseaudio": {
     "rotate": 90,
     "format": "{icon} {volume}%",
@@ -113,6 +106,11 @@
     "scroll-step": 3,
     "on-click": "pavucontrol",
     "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+  "network": {
+    "rotate": 90,
+    "format-wifi": "{essid}    ",
+    "format-ethernet": " {ifname}"
   }
 }
 
